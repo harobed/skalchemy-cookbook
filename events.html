@@ -104,6 +104,18 @@
                 <span class="n">obj</span><span class="o">.</span><span class="n">_deleted_after_flush</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">flush_context</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Utilisation :</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Contact</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s">&#39;contacts&#39;</span>
+    <span class="n">__mapper_args__</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;extension&#39;</span><span class="p">:</span> <span class="n">EventsOnInstance</span><span class="p">()</span> <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">_before_insert</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c"># Do some stuff here</span>
+
+    <span class="k">def</span> <span class="nf">_before_update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c"># Do some stuff here</span>
+</pre></div>
+</div>
 </div>
 
 
