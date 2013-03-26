@@ -57,7 +57,6 @@
   <div class="section" id="extension-evenements">
 <h1>Extension événements<a class="headerlink" href="#extension-evenements" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">sqlalchemy.orm.interfaces</span> <span class="kn">import</span> <span class="n">MapperExtension</span><span class="p">,</span> <span class="n">SessionExtension</span>
-<span class="kn">from</span> <span class="nn">sqlalchemy.orm.collections</span> <span class="kn">import</span> <span class="n">InstrumentedList</span>
 
 <span class="k">class</span> <span class="nc">EventsOnInstance</span><span class="p">(</span><span class="n">MapperExtension</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">before_insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">connection</span><span class="p">,</span> <span class="n">instance</span><span class="p">):</span>
