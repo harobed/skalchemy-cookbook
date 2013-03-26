@@ -2,7 +2,7 @@
 Extension événements
 ====================
 
-::
+.. code-block:: python
 
     from sqlalchemy.orm.interfaces import MapperExtension, SessionExtension
     from sqlalchemy.orm.collections import InstrumentedList
@@ -50,3 +50,17 @@ Extension événements
             for obj in session.deleted:
                 if hasattr(obj, '_deleted_after_flush'):
                     obj._deleted_after_flush(session, flush_context)
+
+Utilisation :
+
+.. code-block:: python
+
+    class Contact(Base):
+        __tablename__ = 'contacts'
+        __mapper_args__ = {'extension': EventsOnInstance() }
+
+        def _before_insert(self):
+            # Do some stuff here
+
+        def _before_update(self):
+            # Do some stuff here
