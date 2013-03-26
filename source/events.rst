@@ -5,7 +5,6 @@ Extension événements
 .. code-block:: python
 
     from sqlalchemy.orm.interfaces import MapperExtension, SessionExtension
-    from sqlalchemy.orm.collections import InstrumentedList
 
     class EventsOnInstance(MapperExtension):
         def before_insert(self, mapper, connection, instance): 
