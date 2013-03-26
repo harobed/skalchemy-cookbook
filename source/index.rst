@@ -19,4 +19,4 @@ ce projet pour m'envoyer vos Mixin, vous classes modèles génériques…
 
    mixin
    column_extensions
-
+   events
